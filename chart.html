@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.chartjs.org/assets/Chart.js"></script>
+</head>
+
+<body>
+ 
+</body>
+<canvas id="myChart" width="195" height="195"></canvas>
+<script type="text/javascript">
+    var data = [{
+        value: 25,
+        color: "#4f4f51"
+    }, {
+        value: 11,
+        color: "#6d6e72"
+    }, {
+        value: 11,
+        color: "#afb0b4"
+    }, {
+    
+    
+        value: 22,
+        color: "#e96245"
+    }, {
+    
+    
+        value: 20,
+        color: "#e33326"
+    },
+	{
+        value: 11,
+        color: "#bb141e"
+    }
+
+    ]
+
+    var options = {
+        percentageInnerCutout: 50,
+        segmentShowStroke:false
+    };
+
+    
+    var c = $('#myChart');
+    var ct = c.get(0).getContext('2d');
+    var ctx = document.getElementById("myChart").getContext("2d"); 
+
+    myNewChart = new Chart(ct).Doughnut(data, options);
+</script>
+</html>
